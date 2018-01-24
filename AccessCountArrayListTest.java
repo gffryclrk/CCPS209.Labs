@@ -44,6 +44,6 @@ public strictfp class AccessCountArrayListTest {
                 check.update(acad.getSetCount());
             }
         }
-        assertEquals(1213037582L, check.getValue());
+        assertEquals(2665225370L, check.getValue());
     }  
 }
