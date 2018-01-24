@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=AccessCountArrayList
+comment1.params=index
+comment1.target=java.lang.Object\ get(int)
+comment1.text=\n\ \ \ \ \ \ \ \ public\ AccessCountArrayList(){\n\ \ \ \ \ \ \ \ \ \ \ \ super();\n\ \ \ \ \ \ \ \ }\n
+comment2.params=index\ element
+comment2.target=java.lang.Object\ set(int,\ java.lang.Object)
+comment3.params=
+comment3.target=int\ getGetCount()
+comment4.params=
+comment4.target=int\ getSetCount()
+comment5.params=
+comment5.target=void\ resetCounts()
+numComments=6
