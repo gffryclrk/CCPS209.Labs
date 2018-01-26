@@ -12,5 +12,12 @@ public class VowelComparator implements Comparator<String>{
         }
       }
     }
+    if(count[0] < count[1]) { return -1; }
+    else if(count[0] > count[1]) { return +1; }
+    else{
+      String reverse1 = new StringBuilder(s1);
+      String reverse2 = new StringBuilder(s2);
+      
+    }
   }
 }
