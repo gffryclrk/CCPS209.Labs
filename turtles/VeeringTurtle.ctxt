@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=VeeringTurtle
+comment1.params=veer
+comment1.target=VeeringTurtle(double)
+comment2.params=dist
+comment2.target=void\ move(double)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

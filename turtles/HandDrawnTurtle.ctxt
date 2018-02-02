@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=HandDrawnTurtle
+comment0.text=\n\ An\ implementation\ of\ Turtle\ that\ simulates\ a\ "hand\ drawn"\ look\n\ for\ lines\ that\ it\ draws,\ using\ random\ overreach\ and\ wobbliness.\n\ @author\ Ilkka\ Kokkarinen\n
+comment1.params=dist
+comment1.target=void\ move(double)
+comment1.text=\n\ Move\ the\ turtle\ to\ the\ current\ direction,\ drawing\ a\ curve\ to\ simulate\n\ a\ hand\ drawn\ line\ if\ the\ pen\ is\ fown.\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3
