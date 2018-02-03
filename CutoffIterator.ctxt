@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=CutoffIterator
-comment1.params=it\ limit
-comment1.target=CutoffIterator(java.util.Iterator,\ int)
-comment2.params=
-comment2.target=boolean\ hasNext()
-comment3.params=
-comment3.target=java.lang.Object\ next()
-numComments=4
