@@ -42,7 +42,14 @@ public class TurtleDemo {
         @Override public void paintComponent(Graphics g) {
             g.drawImage(img, 0, 0, this);
         }
+
+        // static void drawEgg(Graphics2D g2, double x, double y, double diameter){
+        //     // g2.fill(new Ellipse2D.Double(x, y, diameter));
+        //     g2.draw(new Ellipse2D.Double(x, y, x+diameter, y+diameter));
+        // }
     }
+
+
     
     // The array of turtles to demonstrate in the JFrame window.
     private static Turtle[] turtles = {
@@ -81,7 +88,8 @@ public class TurtleDemo {
         new RainbowTurtle(),
         new RainbowTurtleDecorator(new HandDrawnTurtle()),
         new SkippingTurtle(3),
-        new SkippingTurtleDecorator(new BasicTurtle(), 5)
+        new SkippingTurtleDecorator(new BasicTurtle(), 5),
+        new RainbowTurtleDecorator(new EggLayingTurtle(1,1))
     };
     public static void renderClarkTurtles(){
         JFrame gframe = new JFrame("Clark Turtles");
