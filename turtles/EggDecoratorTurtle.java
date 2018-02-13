@@ -2,11 +2,14 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
 
-public class EggLayingTurtle extends BasicTurtle{
+public class EggDecoratorTurtle extends TurtleDecorator{
+	private Turtle turtle;
 	private double prob, diameter;
 	Random rng = new Random();
 
-	public EggLayingTurtle(double prob, double diameter){
+	public EggDecoratorTurtle(Turtle turtle, double prob, double diameter){
+		super(turtle);
+		this.turtle = turtle;
 		this.prob = prob;
 		this.diameter = diameter;
 	}
@@ -17,20 +20,18 @@ public class EggLayingTurtle extends BasicTurtle{
 	}
 
 	@Override public void move(double dist){
-		super.move(dist);
+		turtle.move(dist);
 
-		
 		if(rng.nextDouble() < prob) {
-			Graphics2D g2 = getGraphics2D();
-			g2.setPaint(getColor());
-			g2.setStroke(getStroke());
-			drawEgg(g2, getX(), getY(), diameter);
-			// TurtleDemo.TurtleSpiral.drawEgg();
+			//Graphics2D g2 = turtle.getGraphics2D();
+			//g2.setPaint(getColor());
+			//g2.setStroke(getStroke());
+			drawEgg(turtle.getGraphics2D(), getX(), getY(), diameter);
+			// drawEgg(getGraphics2D, getX(), getY(), diameter);
 
 		}
 	}
 	@Override public String toString(){
-		return "EggLayingTurtle";
+		return "EggDecoratorTurtle";
 	}
-
 }

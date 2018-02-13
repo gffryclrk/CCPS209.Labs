@@ -89,7 +89,10 @@ public class TurtleDemo {
         new RainbowTurtleDecorator(new HandDrawnTurtle()),
         new SkippingTurtle(3),
         new SkippingTurtleDecorator(new BasicTurtle(), 5),
-        new RainbowTurtleDecorator(new EggLayingTurtle(1,1))
+        new RainbowTurtleDecorator(new EggLayingTurtle(0.5,30)),
+        new EggLayingTurtle(0.5,50),
+        new EggDecoratorTurtle(new RainbowTurtle(), 0.45, 40),
+        new EggActionTurtle()
     };
     public static void renderClarkTurtles(){
         JFrame gframe = new JFrame("Clark Turtles");
