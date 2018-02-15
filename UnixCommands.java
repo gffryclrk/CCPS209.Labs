@@ -16,14 +16,16 @@ public class UnixCommands {
 		//try {
 			
 			int c;
+			char p = ' '; //previous. 
 			//char c;
 			while((c = br.read()) != -1) {
 				counts[2] += 1;
-				if(Character.isWhitespace(c)) counts[1] += 1;
+				if(!Character.isWhitespace(c) && Character.isWhitespace(p)) counts[1] += 1;
 				//if(int =)
 				//if('\n') counts[2] +=1;
-				char b = (char) c;
+				p = (char) c;
 				//System.out.println(c);
+				if (p == '\n') counts[0] += 1;
 				
 			}
 			
