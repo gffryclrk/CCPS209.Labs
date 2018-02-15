@@ -1,3 +1,6 @@
 .DS_Store
 *.ctxt
 *.class
+/bin/
+.project
+.classpath
