@@ -1,0 +1,15 @@
+1.  Which one of your three solutions was the ​ easiest for you ​ to write? Why?
+
+The decorator pattern was the easiest for me to write for the following reason: I had already mostly solved the actual business logic of solving the problem using the Template Method pattern and was familiar with the Decorator Pattern from the previous two labs. As a result the Decorator was the easiest for me to write.
+
+2.  Having done all the previous work, suppose you now also wanted to create a turtle that lays eggs while it draws its path in a hand drawn style, as in the ​ HandDrawnTurtle example class that you already have.  Which one of your three solutions would best accommodate this feature request?  Why?
+
+I think you could do this easily enough by using the Decorator pattern: Instantiate an EggLayingTurtle that decorates a HandDrawnTurtle.
+
+3.  Having done all the previous work, suppose you now also wanted to create a class SnappingTurtle that, instead of laying eggs, outputs the message “snap snap” on the console after each time it moves.  Which one of your three solutions would accommodate this feature request best? Why?
+
+I think the Strategy Pattern would make this implementation quite simple: Create a new Action, perhaps SnapAction, and pass it to the ActionTurtle.
+
+4.  What general principles of object oriented design can you infer from your answers to the first three questions?
+
+Design Patterns are important to learn and understand in order to maintain your code as your project grows in size and complexity. There are many advantages to be had by these patterns such as improved code re-usability, minimized repetition, and reduced bugs (although I don't have any first hand experience of bug reduction at this stage of my understanding). Implementing these patterns is straightforward and becomes more so with practice. These design patterns also highlight some of the advantages of Polymorphism, Inheritance and Object-oriented Programming in general. There was some discussion on Hacker News a while ago about how many programming problems are averted or solved beforehand by working things out on paper before you touch a keyboard. This course nicely supports that argument by highlighting the advantages of programming design; solving the complexities of your code before you write it helps save time in the long-run.  
