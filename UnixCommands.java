@@ -3,6 +3,7 @@
 //import java.io.FileWriter;
 //import java.io.IOException;
 import java.io.*;
+import java.util.*;
 
 public class UnixCommands {
 	public int[] wc(Reader in) throws IOException{
@@ -31,9 +32,31 @@ public class UnixCommands {
 		// Reader r = new InputStreamReader(new FileInputStream("README.TXT"), "UTF-8");
 		// wc(r);
 		// r.clos8Ge();
+
+		Reader r = new InputStreamReader(new FileInputStream("lorem.txt"), "UTF-8");
+		UnixCommands unix = new UnixCommands();
+		unix.tail(r, new OutputStreamWriter(System.out), 5);
 	}
 	
 	public void tail(Reader in, Writer out, int lines) throws IOException{
+		LinkedList lb = new LinkedList<String>(); // Line buffer lb
+		BufferedReader br = new BufferedReader(in);
+		PrintWriter pw = new PrintWriter(out);
+		String line;
+		while((line = br.readLine()) != null){
+			// if(line.length() == 0) { continue ;} // This is from Illka's SomeUnixCommands.java ln:38. Not sure purpose...
+			lb.add(line);
+			if(lb.size() > lines) lb.remove(); // Only need to store as many lines as required by lines paramater...
+		}
 		
+		ListIterator<String> listIterator = lb.listIterator();
+		while(listIterator.hasNext()){
+			line = listIterator.next();
+			pw.println(line);
+			// System.out.println(line);
+			// pw.println(listIterator.next());
+		}
+		pw.flush();
+
 	}
 }
