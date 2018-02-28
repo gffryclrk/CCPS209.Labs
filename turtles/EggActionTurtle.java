@@ -22,7 +22,9 @@ public class EggActionTurtle extends ActionTurtle{
             if(rng.nextDouble() < prob){
 
             	Graphics2D g2 = turtle.getGraphics2D();
-               	g2.draw(new Ellipse2D.Double(turtle.getX()-(diameter/2), turtle.getY()-(diameter/2), diameter, diameter));
+            	Ellipse2D el = new Ellipse2D.Double(turtle.getX()-(diameter/2), turtle.getY()-(diameter/2), diameter, diameter);
+               	g2.draw(el);
+               	g2.fill(el);
     		}        
         }
     }

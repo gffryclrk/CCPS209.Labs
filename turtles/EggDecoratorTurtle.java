@@ -15,19 +15,16 @@ public class EggDecoratorTurtle extends TurtleDecorator{
 	}
 
 	static void drawEgg(Graphics2D g2, double x, double y, double diameter){
-	    // g2.fill(new Ellipse2D.Double(x, y, diameter));
-	    g2.draw(new Ellipse2D.Double(x-(diameter/2), y-(diameter/2), diameter, diameter));
+	    Ellipse2D el = new Ellipse2D.Double(x-(diameter/2), y-(diameter/2), diameter, diameter);
+	    g2.draw(el);
+	    g2.fill(el);
 	}
 
 	@Override public void move(double dist){
 		turtle.move(dist);
 
 		if(rng.nextDouble() < prob) {
-			//Graphics2D g2 = turtle.getGraphics2D();
-			//g2.setPaint(getColor());
-			//g2.setStroke(getStroke());
 			drawEgg(turtle.getGraphics2D(), getX(), getY(), diameter);
-			// drawEgg(getGraphics2D, getX(), getY(), diameter);
 
 		}
 	}

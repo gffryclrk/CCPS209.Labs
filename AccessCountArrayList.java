@@ -11,15 +11,15 @@ public class AccessCountArrayList<E>
         // private static int getCount = 0;
         // private static int setCount = 0;
         
-        // public AccessCountArrayList(){
-        //     super();
-        // }
+        public AccessCountArrayList(){
+            super();
+        }
         // public AccessCountArrayList(Collection<? extends E> c){
         // 	super(c);
         // }
-        // public AccessCountArrayList(int initialCapacity){
-        // 	super(initialCapacity);
-        // }
+        public AccessCountArrayList(int initialCapacity){
+        	super(initialCapacity);
+        }
         // static {
         // 	getCount = 0;
         // 	setCount = 0;

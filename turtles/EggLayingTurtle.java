@@ -12,8 +12,9 @@ public class EggLayingTurtle extends BasicTurtle{
 	}
 
 	static void drawEgg(Graphics2D g2, double x, double y, double diameter){
-	    // g2.fill(new Ellipse2D.Double(x, y, diameter));
-	    g2.draw(new Ellipse2D.Double(x-(diameter/2), y-(diameter/2), diameter, diameter));
+	    Ellipse2D el = new Ellipse2D.Double(x-(diameter/2), y-(diameter/2), diameter, diameter);
+	    g2.draw(el);
+	    g2.fill(el);
 	}
 
 	@Override public void move(double dist){
@@ -21,12 +22,7 @@ public class EggLayingTurtle extends BasicTurtle{
 
 		
 		if(rng.nextDouble() < prob) {
-			Graphics2D g2 = getGraphics2D();
-			g2.setPaint(getColor());
-			g2.setStroke(getStroke());
-			drawEgg(g2, getX(), getY(), diameter);
-			// TurtleDemo.TurtleSpiral.drawEgg();
-
+			drawEgg(getGraphics2D(), getX(), getY(), diameter);
 		}
 	}
 	@Override public String toString(){
