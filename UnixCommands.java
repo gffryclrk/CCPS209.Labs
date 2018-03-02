@@ -1,7 +1,3 @@
-//import java.io.Reader;
-//import java.io.FileReader;
-//import java.io.FileWriter;
-//import java.io.IOException;
 import java.io.*;
 import java.util.*;
 
@@ -22,20 +18,18 @@ public class UnixCommands {
 				
 			}
 			
-			// System.out.println("0 " + counts[0] + " 1 " + counts[1] + " 2 " + counts[2]);
 			return counts;
 		
 	}
 	
 	public static void main(String[] args) throws IOException{
 		
-		// Reader r = new InputStreamReader(new FileInputStream("README.TXT"), "UTF-8");
-		// wc(r);
-		// r.clos8Ge();
+		// This was for testing & debugging purposes 
+		// I'm leaving it here in case I want it for something later (next lab, perhaps)
 
-		Reader r = new InputStreamReader(new FileInputStream("lorem.txt"), "UTF-8");
-		UnixCommands unix = new UnixCommands();
-		unix.tail(r, new OutputStreamWriter(System.out), 5);
+		// Reader r = new InputStreamReader(new FileInputStream("lorem.txt"), "UTF-8");
+		// UnixCommands unix = new UnixCommands();
+		// unix.tail(r, new OutputStreamWriter(System.out), 5);
 	}
 	
 	public void tail(Reader in, Writer out, int lines) throws IOException{
@@ -53,8 +47,6 @@ public class UnixCommands {
 		while(listIterator.hasNext()){
 			line = listIterator.next();
 			pw.println(line);
-			// System.out.println(line);
-			// pw.println(listIterator.next());
 		}
 		pw.flush();
 
