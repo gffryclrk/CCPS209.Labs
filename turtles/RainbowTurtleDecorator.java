@@ -14,4 +14,7 @@ public class RainbowTurtleDecorator extends TurtleDecorator{
         turtle.move(dest);
         turtle.setColor(new Color(rng.nextInt(255), rng.nextInt(255), rng.nextInt(255)));
     }
+    @Override public String toString(){
+    	return "RainbowTurtleDecorator";
+    }
 }

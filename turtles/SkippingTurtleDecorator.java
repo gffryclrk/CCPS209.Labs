@@ -17,4 +17,7 @@ public class SkippingTurtleDecorator extends TurtleDecorator{
 		turtle.move(dist);
 		count+=1;
 	}
+	@Override public String toString(){
+		return "SkippingTurtleDecorator";
+	}
 }

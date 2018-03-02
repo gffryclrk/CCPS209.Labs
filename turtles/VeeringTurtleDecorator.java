@@ -12,7 +12,11 @@ public class VeeringTurtleDecorator extends TurtleDecorator{
 	}
 
 	@Override public void move(double dist){
-		this.turn(veer);
 		turtle.move(dist);
+		this.turn(veer);
+	}
+
+	@Override public String toString(){
+		return "VeeringTurtleDecorator";
 	}
 }
