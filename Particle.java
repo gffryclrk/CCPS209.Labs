@@ -20,10 +20,10 @@ public class Particle {
 		return y;
 	}
 	void move(){
-		x += rng.nextGaussian();
-		y += rng.nextGaussian();
+		this.x += rng.nextGaussian();
+		this.y += rng.nextGaussian();
 	}
-
+	/*
 	public class ParticleField extends JPanel{
 
 		private static final int SIZE = 500;
@@ -57,4 +57,5 @@ public class Particle {
 			f.setVisible(true);
 		}
 	}
+	*/
 }
