@@ -1,11 +1,8 @@
 import java.awt.*;
-// import java.awt.event.ActionEvent;
-// import java.awt.event.ActionListener;
- import java.awt.event.WindowAdapter;
- import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.*;
-//import javax.swing.Timer; 
 
 
 public class ParticleFieldWithTimer extends ParticleField{
@@ -15,16 +12,6 @@ public class ParticleFieldWithTimer extends ParticleField{
 	public ParticleFieldWithTimer(){
 		pl = getParticles();
 
-		/*
-		int delay = 20;
-		ActionListener taskPerformer = new ActionListener() {
-			public void actionPerformed(ActionEvent evt){
-				pl.forEach(x -> x.move());
-				repaint();
-			}
-		};
-		pft = new javax.swing.Timer(delay, taskPerformer);
-		*/
 		pft = new javax.swing.Timer(20, (ae) -> { 
 			pl.forEach(x -> x.move()); 
 			repaint(); 
@@ -42,14 +29,11 @@ public class ParticleFieldWithTimer extends ParticleField{
 		
 		f.addWindowListener(new WindowAdapter(){
 			public void windowClosing(WindowEvent we){
-//				stopTimer();
 				stopTimer();
 				System.out.println("Timer stopped!");
 				f.dispose();
 			}
-		});
-
-		
+		});		
 
 		f.add(new ParticleFieldWithTimer());
 		f.pack();

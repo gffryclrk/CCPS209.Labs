@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-//import java.util.*;
+
 
 public class ParticleFieldWithThread extends ParticleField{
 	private java.util.List<Particle> pl;
@@ -8,7 +8,7 @@ public class ParticleFieldWithThread extends ParticleField{
 
 	public ParticleFieldWithThread(){
 		pl = getParticles();
-		// pt = new Thread(new Runnable() {
+
 		new Thread(new Runnable() {
 			public void run(){
 				while(running){
@@ -22,7 +22,7 @@ public class ParticleFieldWithThread extends ParticleField{
 				}
 			}
 		}).start();
-		// pt.start();
+
 
 	}
 

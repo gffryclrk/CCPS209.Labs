@@ -66,6 +66,13 @@ public class Anagrams {
 		}
 		return sum;
 	}
+	private long charHash(String word) {
+		long hash = 1;
+		for (char c: word.toCharArray()) {
+			hash = (int)c * hash;
+		}
+		return hash;
+	}
 	public static void main(String[] args) {
 		/*
 		String[] wl = {"pram", "ramp", "poot", "hoot", "top","pot"};
