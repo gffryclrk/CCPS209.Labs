@@ -20,42 +20,17 @@ public class Particle {
 		return y;
 	}
 	void move(){
-		this.x += rng.nextGaussian();
-		this.y += rng.nextGaussian();
+		// this.x += rng.nextGaussian();
+		// this.y += rng.nextGaussian();
+		
+		// https://www.mathsisfun.com/geometry/unit-circle.html
+		// I wasn't sure if I should use nextGaussian() or nextDouble() but
+		// opted for nextGaussian() because that was what the original
+		// outline asked for. 
+		
+		// double theta = Math.PI * rng.nextDouble();
+		double theta = Math.PI * rng.nextGaussian(); 
+		this.x += Math.cos(theta);
+		this.y += Math.sin(theta);
 	}
-	/*
-	public class ParticleField extends JPanel{
-
-		private static final int SIZE = 500;
-		private ArrayList<Particle> particles = new ArrayList<>(1000);
-
-		public ParticleField(){
-			// particles.forEach()
-			this.setPreferredSize(new Dimension(SIZE, SIZE));
-			this.setBackground(Color.WHITE);
-
-			for(int i=0; i<1000; i+=1){
-				particles.add(new Particle());
-			}
-		}
-
-		public void paintComponent(Graphics g){
-			super.paintComponent(g);
-
-			for(Particle particle : particles){
-				g.drawRect((int)particle.getX(), (int)particle.getY(), 3, 3);
-			}
-		}
-
-		public static void main(String[] args){
-			JFrame f = new JFrame("Some particles!");
-			f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-			f.setLayout(new FlowLayout());
-
-			f.add(new ParticleField());
-			f.pack();
-			f.setVisible(true);
-		}
-	}
-	*/
 }

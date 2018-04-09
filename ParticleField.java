@@ -16,8 +16,6 @@ public class ParticleField extends JPanel{
 			particles.add(new Particle());
 		}
 	}
-//	public int getWidth() { return SIZE; }
-//	public int getHeight() { return SIZE; }
 
 	protected java.util.List<Particle> getParticles(){
 		return particles; 
